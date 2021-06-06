@@ -1,0 +1,31 @@
+.header {
+  padding: 2rem;
+  height: 10rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #bbb;
+}
+
+.logo {
+  .icon {
+    font-size: 2.4rem;
+  }
+  .subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+.menuIcon {
+  display: none;
+
+  @media screen and (max-width: 900px) {
+    display: block;
+    margin-left: auto;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+}

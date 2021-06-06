@@ -1,0 +1,26 @@
+.nav {
+  margin-left: auto;
+  font-size: 1.2rem;
+  font-weight: 500;
+  align-self: flex-end;
+
+  .navLink {
+    margin-left: 2rem;
+    display: inline-block;
+    transition: transform 0.3s ease;
+
+    &.active {
+      font-weight: 700;
+    }
+
+    &:hover {
+      color: var(--site-highlight);
+      transform: scale(1.2);
+      text-shadow: 0 0 1px var(--site-highlight);
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+}
