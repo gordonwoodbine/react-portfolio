@@ -2,24 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaRegSmileBeam } from 'react-icons/fa';
 import style from './Home.module.scss';
-
-const sectionVariants = {
-  hidden: {
-    x: '100vw'
-  },
-  visible: {
-    x: 0,
-    transition: {
-      type: 'spring',
-      mass: 0.4,
-      damping: 8
-    }
-  },
-  exit: {
-    x: '-100vw',
-    transition: { ease: 'easeInOut'}
-  }
-};
+import { sectionVariants } from '../../global/framerVariants';
 
 const Home = () => {
   return (
@@ -42,10 +25,10 @@ const Home = () => {
           <p>This little site is all about me, the technologies I either know or am learning, what I've done and where (I think) I'm going. It's not exactly Wikipedia.</p>
           <div className={style.btnGroup}>
             <Link to="/about" className={style.linkBtn}>
-              <button className={style.btn}>About Me</button>
+              <button className="btn">About Me</button>
             </Link>
             <Link to="/projects" className={style.linkBtn}>
-              <button className={`${style.btn} ${style.btnOutline}`}>Projects</button>
+              <button className="btn btnOutline">Projects</button>
             </Link>
           </div>
         </div>

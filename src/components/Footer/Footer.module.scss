@@ -1,10 +1,17 @@
+@import '../../global/mixins';
+
 .footer {
-  border-top: 2px dashed var(--site-dark);
+  // border-top: 2px dashed var(--site-dark);
+  border-top: 1px solid #bbb;
   padding: 1rem;
   text-align: center;
 
   & p {
     margin: 0.5rem 0;
+
+    @include small-screen {
+      font-size: 1rem;
+    }
   }
 }
 

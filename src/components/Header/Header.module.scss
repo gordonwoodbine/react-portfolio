@@ -1,6 +1,12 @@
+@import '../../global/mixins';
+
 .header {
   padding: 2rem;
-  height: 10rem;
+  // height: 10rem;
+
+  @include small-screen {
+    padding: 1rem 2rem;
+  }
 }
 
 .container {
@@ -13,9 +19,17 @@
 .logo {
   .icon {
     font-size: 2.4rem;
+
+    @include small-screen {
+      font-size: 2rem;
+    }
   }
   .subtitle {
     font-size: 1.2rem;
+
+    @include small-screen {
+      font-size: 1rem;
+    }
   }
 }
 

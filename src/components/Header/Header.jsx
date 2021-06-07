@@ -1,6 +1,6 @@
 import { FaBars } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import NavMenu from '../NavMenu/NavMenu';
+import { NavMenu } from '../';
 import style from './Header.module.scss';
 
 const headerVariants = {

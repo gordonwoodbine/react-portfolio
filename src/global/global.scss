@@ -1,4 +1,5 @@
 @use 'vars';
+@import './mixins';
 
 * {
   box-sizing: border-box;
@@ -30,6 +31,22 @@ p {
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.6rem;
+
+  @include small-screen {
+    font-size: 1rem;
+  }
+}
+
+h2 {
+  @include small-screen {
+    font-size: 1.4rem;
+  }
+}
+
+h3 {
+  @include small-screen {
+    font-size: 1.4rem;
+  }
 }
 
 .container {
@@ -44,4 +61,43 @@ img {
 
 .highlight {
   color: var(--site-highlight);
+}
+
+.box {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  transform: skew(-1deg);
+  border: 3px solid crimson;
+  margin-bottom: 2rem;
+  background-color: crimson;
+  color: white;
+
+  @include small-screen {
+    padding: 0.25rem 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.btn {
+  width: 100%;
+  background: radial-gradient(circle at 67% 0%, crimson, rgb(255, 8, 57));
+  color: white;
+  border: 3px solid crimson;
+  padding: 1rem;
+  border-radius: 100px;
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.btnOutline {
+  background: whitesmoke;
+  color: crimson;
 }

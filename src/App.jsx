@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Route, Switch, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import Header from './components/Header/Header';
-import MobileMenu from './components/MobileMenu/MobileMenu';
-import Home from './pages/Home/Home';
-import Footer from './components/Footer/Footer';
+
+import { Header, MobileMenu, Footer } from './components';
+import { Home, About, Projects } from './pages';
+
 import './global/global.scss';
 import style from './App.module.scss';
 
@@ -44,6 +44,12 @@ const App = () => {
           <Switch location={location} key={location.key}>
             <Route exact path="/">
               <Home />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/projects">
+              <Projects />
             </Route>
           </Switch>
         </AnimatePresence>

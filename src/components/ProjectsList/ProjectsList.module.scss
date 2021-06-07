@@ -1,0 +1,85 @@
+@import '../../global/mixins';
+
+.title {
+  margin: 0rem 0 3rem 0;
+  display: inline-block;
+  position: relative;
+
+  &:before {
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: crimson;
+    position: absolute;
+    bottom: -14px;
+    left: 0;
+    transform: rotate(1deg);
+  }
+}
+
+.project {
+  display: flex;
+  margin-bottom: 3rem;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  & .tile {
+    flex: 1;
+    height: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+
+    & img {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 1100px) {
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  & .text {
+    flex: 1;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    & .block {
+      margin-bottom: 0.5rem;
+
+      & .question {
+        font-weight: 700;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    @include small-screen {
+      padding-left: 0;
+    }
+  }
+
+  @media screen and (max-width: 1100px) {
+    flex-direction: column;
+  }
+}
+
+.btnGroup {
+  display: flex;
+  margin-top: 1rem;
+
+  & .btn {
+    margin-right: 1rem;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
