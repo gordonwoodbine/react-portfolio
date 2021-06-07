@@ -1,13 +1,11 @@
 .nav {
-  margin-left: auto;
   font-size: 1.2rem;
   font-weight: 500;
-  align-self: flex-end;
 
   .navLink {
     margin-left: 2rem;
     display: inline-block;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
 
     &.active {
       font-weight: 700;
@@ -20,7 +18,19 @@
     }
   }
 
-  @media screen and (max-width: 900px) {
-    display: none;
+  &.mobile {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .navLink {
+      margin: 1rem 0;
+      font-size: 2rem;
+      color: whitesmoke;
+
+      &.active {
+        color: var(--site-highlight);
+      }
+    }
   }
 }

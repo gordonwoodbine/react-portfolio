@@ -1,0 +1,31 @@
+.menu {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+
+  &.active {
+    top: 0;
+  }
+}
+
+.close {
+  color: #fff;
+  font-size: 2rem;
+  position: absolute;
+  top: 3rem;
+  right: 2rem;
+  cursor: pointer;
+}
+
+.navMenu {
+  display: flex;
+  flex-direction: column;
+}

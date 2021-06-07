@@ -1,0 +1,19 @@
+.footer {
+  border-top: 2px dashed var(--site-dark);
+  padding: 1rem;
+  text-align: center;
+
+  & p {
+    margin: 0.5rem 0;
+  }
+}
+
+.icon {
+  font-size: 1.3rem;
+  margin: 0 0.3rem;
+}
+
+.heart {
+  color: var(--site-highlight);
+  transform: translateY(2px);
+}

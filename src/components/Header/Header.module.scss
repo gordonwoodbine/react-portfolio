@@ -29,3 +29,12 @@
     cursor: pointer;
   }
 }
+
+.navWrapper {
+  margin-left: auto;
+  align-self: flex-end;
+
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+}
