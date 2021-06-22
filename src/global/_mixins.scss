@@ -3,3 +3,9 @@
     @content;
   }
 }
+
+@mixin med-screen {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
