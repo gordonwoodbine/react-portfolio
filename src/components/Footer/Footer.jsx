@@ -6,13 +6,13 @@ const Footer = () => {
   const year = new Date().getFullYear();
   const footerVariants = {
     hidden: {
-      opacity: 0
+      y: 200
     },
     visible: {
-      opacity: 1,
+      y: 0,
       transition: {
-        delay: 0.8,
-        duration: 1
+        type: 'spring',
+        delay: 0.5
       }
     }
   }
